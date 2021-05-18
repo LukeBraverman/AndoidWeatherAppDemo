@@ -2,7 +2,7 @@ package com.ytguide.weatherappdemo;
 
 public class WeatherReportModel {
 
-    private int it;
+    private int id;
     private String weather_state_name;
     private String weather_state_abbr;
     private String wind_direction_compass;
@@ -19,8 +19,8 @@ public class WeatherReportModel {
     private int predictability;
 
 
-    public WeatherReportModel(int it, String weather_state_name, String weather_state_abbr, String wind_direction_compass, String created, String applicable_sate, float min_temp, float max_temp, float the_temp, float wind_speed, float wind_direction, float air_pressure, int humidity, float visibility, int predictability) {
-        this.it = it;
+    public WeatherReportModel(int id, String weather_state_name, String weather_state_abbr, String wind_direction_compass, String created, String applicable_sate, float min_temp, float max_temp, float the_temp, float wind_speed, float wind_direction, float air_pressure, int humidity, float visibility, int predictability) {
+        this.id = id;
         this.weather_state_name = weather_state_name;
         this.weather_state_abbr = weather_state_abbr;
         this.wind_direction_compass = wind_direction_compass;
@@ -37,33 +37,27 @@ public class WeatherReportModel {
         this.predictability = predictability;
     }
 
+    public WeatherReportModel() {
+
+    }
+
     @Override
     public String toString() {
-        return "WeatherReportModel{" +
-                "it=" + it +
-                ", weather_state_name='" + weather_state_name + '\'' +
-                ", weather_state_abbr='" + weather_state_abbr + '\'' +
-                ", wind_direction_compass='" + wind_direction_compass + '\'' +
-                ", created='" + created + '\'' +
-                ", applicable_sate='" + applicable_sate + '\'' +
+        return
+                ", Date='" + applicable_sate + '\'' +
+                "Ouside sky: " + weather_state_name +
                 ", min_temp=" + min_temp +
                 ", max_temp=" + max_temp +
-                ", the_temp=" + the_temp +
-                ", wind_speed=" + wind_speed +
-                ", wind_direction=" + wind_direction +
-                ", air_pressure=" + air_pressure +
-                ", humidity=" + humidity +
-                ", visibility=" + visibility +
-                ", predictability=" + predictability +
-                '}';
+                ", the_temp=" + the_temp
+                ;
     }
 
-    public int getIt() {
-        return it;
+    public int getId() {
+        return id;
     }
 
-    public void setIt(int it) {
-        this.it = it;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getWeather_state_name() {
